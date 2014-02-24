@@ -50,9 +50,11 @@
     self.view.frame = newFrame;
 }
 
-- (void)textFieldShouldReturn
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-
+    [self.numStepsBox resignFirstResponder];
+    [self.stepSizeBox resignFirstResponder];
+    return YES;
 }
 
 - (void)viewDidLayoutSubviews
@@ -73,9 +75,12 @@
     self.spiroView.numberOfSteps = [self.numStepsBox.text intValue];
     self.spiroView.stepSize = [self.stepSizeBox.text floatValue];
     
-    [self.spiroView setNeedsDisplay];
+    CGFloat offset = [self.scrollView contentOffset].x;
+    
+    if (offset == 0)
+        [self.harminoView setNeedsDisplay];
+    else
+        [self.spiroView setNeedsDisplay];
 }
 
-- (IBAction)lSliderChange:(id)sender {
-}
 @end

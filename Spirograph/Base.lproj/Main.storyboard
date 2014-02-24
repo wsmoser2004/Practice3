@@ -46,9 +46,6 @@
                                 <rect key="frame" x="35" y="346" width="267" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="" label=""/>
-                                <connections>
-                                    <action selector="lSliderChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="yZU-4r-Uz6"/>
-                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Njy-gU-pKI">
                                 <rect key="frame" x="35" y="387" width="267" height="34"/>
@@ -101,6 +98,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="harminoView" destination="qKq-cC-GhI" id="RoS-ou-yqz"/>
                         <outlet property="kSlider" destination="Njy-gU-pKI" id="SHU-GN-Ku2"/>
                         <outlet property="lSlider" destination="uEz-Cs-LIh" id="6xH-cI-4sP"/>
                         <outlet property="numStepsBox" destination="zkz-fd-60N" id="OIn-fX-Qdy"/>

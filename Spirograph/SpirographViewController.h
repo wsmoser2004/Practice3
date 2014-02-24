@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HarmonigraphView.h"
 #import "SpirographView.h"
 
 @interface SpirographViewController : UIViewController <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet HarmonigraphView *harminoView;
 @property (weak, nonatomic) IBOutlet SpirographView *spiroView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
